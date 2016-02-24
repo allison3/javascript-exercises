@@ -3,7 +3,24 @@
   <body>
     <h1>Exercise 7</h1>
     <script>
+        var board = "";
+        var size = 8;
+        
+        for(var row = 0; row < size; row++){
+          var rowContent = "";
+          for(var column = 0; column < size; column++){
+            if ((row + column) % 2 === 0){
+              //we are to place a space because this is an even position on the board//
+              rowContent += " ";
+            } else {
+              rowContent += "#";
+            }
+          }
+          board = board + rowContent + '\n';//(board += rowContent)
+        }
 
+
+        console.log(board);
     </script>
   </body>
 </html>
